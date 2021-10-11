@@ -1,7 +1,71 @@
+@charset "UTF-8";
+/*
+*  Los archivos que empiezan con ' _ ' no son escuchados por
+*  el compilador, por eso solo se compila el archivo main.scss
+*  y se genera un único archivo: main.css.
+*  Esto puedes cambiarlo a tu gusto y generar varios archivos.
+*/
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: normal; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   margin: 0; }
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  border-bottom: 1px solid #C70039; }
+  .header-container .logo {
+    color: #C70039;
+    font-size: 2rem;
+    margin: 1rem; }
+  .header-container .menu {
+    margin: 1rem; }
+    .header-container .menu ul {
+      list-style: none;
+      display: flex;
+      font-size: 1.5rem; }
+      .header-container .menu ul a {
+        text-decoration: none;
+        margin: 1rem;
+        color: #C70039; }
+      .header-container .menu ul li:hover {
+        background-color: #C70039; }
+        .header-container .menu ul li:hover a {
+          color: white; }
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/fondo-car.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10rem; }
+  .main-container .main-container__text {
+    color: white;
+    margin-top: 6rem; }
+    .main-container .main-container__text h3 {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 2rem; }
+    .main-container .main-container__text p {
+      margin-bottom: 2rem;
+      text-align: center; }
+  .main-container .flecha span {
+    font-size: 3rem;
+    color: #C70039; }
