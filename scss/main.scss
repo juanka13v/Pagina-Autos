@@ -1,0 +1,16 @@
+/*
+*  Los archivos que empiezan con ' _ ' no son escuchados por
+*  el compilador, por eso solo se compila el archivo main.scss
+*  y se genera un único archivo: main.css.
+*  Esto puedes cambiarlo a tu gusto y generar varios archivos.
+*/
+
+// Configuración inicial
+@import 'init';
+
+// Variables
+@import 'variables';
+
+// Importa todos tus archivos y componentes aquí
+@import 'components/header';
+@import 'components/footer';
