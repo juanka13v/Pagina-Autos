@@ -9,9 +9,10 @@
 @import 'init';
 
 // Variables
-@import 'variables';
+@import 'variables'; 
 
 // Importa todos tus archivos y componentes aquí
 @import 'components/header';
 @import 'components/footer';
 @import 'components/main'; 
+@import 'components/services';

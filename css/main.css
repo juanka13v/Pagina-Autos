@@ -73,6 +73,7 @@ body {
         margin-top: 1rem; }
   .header-container .menu-active {
     display: block;
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -153,3 +154,76 @@ body {
       font-size: 2rem; }
     .main-container .main-container__text p {
       font-size: 1rem; } }
+
+.services-container {
+  background-color: #000000;
+  padding: 2rem 1rem; }
+  .services-container .services-container__title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    color: white; }
+    .services-container .services-container__title h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700; }
+    .services-container .services-container__title p {
+      margin-top: .8rem;
+      text-align: center; }
+  .services-container .services-container__items {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem; }
+    .services-container .services-container__items .services-container__item {
+      border: 1px solid black;
+      width: 33%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      justify-content: space-between; }
+      .services-container .services-container__items .services-container__item .icono {
+        font-size: 3rem;
+        color: #f17c0e; }
+      .services-container .services-container__items .services-container__item h4 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 2rem; }
+      .services-container .services-container__items .services-container__item p {
+        text-align: center;
+        font-size: 1rem;
+        color: #999999;
+        margin-top: 2rem; }
+      .services-container .services-container__items .services-container__item button {
+        background-color: #000000;
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #f17c0e;
+        border-radius: 25px;
+        padding: 1rem 1.5rem;
+        font-weight: 700;
+        border: 2px solid #f17c0e;
+        cursor: pointer; }
+        .services-container .services-container__items .services-container__item button:hover {
+          background-color: #f17c0e;
+          color: #000000; }
+
+@media screen and (max-width: 992px) {
+  .services-container .services-container__items {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .services-container .services-container__items .services-container__item {
+      width: 40%; } }
+
+@media screen and (max-width: 768px) {
+  .services-container .services-container__items {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .services-container .services-container__items .services-container__item {
+      width: 80%; } }
+
+@media screen and (max-width: 576px) {
+  .services-container .services-container__title h2 {
+    font-size: 1.5rem; } }

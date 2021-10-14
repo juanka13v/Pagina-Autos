@@ -1,0 +1,121 @@
+@import 'scss/variables';
+
+.services-container {
+    background-color: $color-2;  
+    padding: 2rem 1rem;
+
+    .services-container__title {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        color: white;
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        p {
+            margin-top: .8rem;
+            text-align: center;
+        }
+    } 
+
+    .services-container__items {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+
+        .services-container__item {
+            border: 1px solid black;
+            width: 33%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            justify-content: space-between;
+
+            .icono {
+                font-size: 3rem;
+                color: $color-1;
+            }
+
+            h4 {
+               text-align: center;
+               font-size: 1.5rem;
+               margin-top: 2rem;
+            }
+
+            p {
+                text-align: center;
+                font-size: 1rem;
+                color: $color-3;
+                margin-top: 2rem;
+            }
+
+            button {
+                background-color: $color-2;
+                margin-top: 2rem;
+                font-size: 1rem;
+                color: $color-1;
+                border-radius: 25px;
+                padding: 1rem 1.5rem;
+                font-weight: 700;
+                border: 2px solid $color-1;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-1;
+                    color: $color-2;
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $breakpoint-lg) {
+
+    .services-container {
+
+        .services-container__items {
+            flex-wrap: wrap;
+            justify-content: center;
+            .services-container__item {
+                width: 40%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    
+   
+    .services-container {
+        
+
+        .services-container__items {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .services-container__item {
+                width: 80%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    
+    .services-container {
+        .services-container__title {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
