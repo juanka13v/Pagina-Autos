@@ -5,28 +5,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: absolute;
+    top: 0;
     z-index: 10000;
-    border-bottom: 1px solid $color-1;
 
     .logo {
         color: $color-1;
-        font-size: 2rem;
-        margin: 1rem;
+        font-size: 1.5rem;
+        margin-left: 1rem;
     }
 
     .menu {
-        margin: 1rem;
+        margin-right: 1rem;
+        
         ul {
             list-style: none;
             display: flex;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             a {
                 text-decoration: none;
-                margin: 1rem;
+                margin: 1rem; 
                 color: $color-1; 
             }
-
+            li {
+                border-radius: 16px;
+                transition: all 0.3s ease-out;
+                margin: 0 .5rem;
+            }
+            
             li:hover {
                 background-color: $color-1;
                 a {
@@ -34,5 +40,82 @@
                 }
             }
         }
+
     }
+
+    .hamburguer {
+        display: none;
+        color: $color-1;
+        z-index: 999;
+    
+        span {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $breakpoint-md) {
+    
+
+    .header-container {
+        
+        
+        .menu {
+            display: none;
+           
+            position: absolute;
+           top: 0;
+           left: 1000%;
+           width: 100%;
+           height: 100vh;
+           background: #000;
+
+           ul {
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               li {
+                   margin-bottom: 1rem;
+                   margin-top: 1rem;
+               }
+           }
+        }
+
+        .menu-active {
+            
+            display: block; 
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100vh;
+           background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+
+           ul {
+               margin-top: 2rem;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               li {
+                   margin-bottom: 1rem;
+                   margin-top: 1rem;
+               }
+           }
+
+            
+        }
+
+        .menu-active {
+            transition: all 1s ease-in;
+        }
+
+        .hamburguer {
+            display: block;
+            cursor: pointer;
+            margin-right: 1rem;
+        }
+    }
+    
 }

@@ -6,15 +6,16 @@
     background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/fondo-car.jpg'); 
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding: 0 10rem;
+    align-items: center; 
 
     .main-container__text {
+        margin-top: 4rem;
         color: white;
-        margin-top: 6rem;
+        width: 80%;
         h3 {
             font-size: 3.5rem;
             text-align: center;
@@ -33,4 +34,72 @@
             color: $color-1;
         }
     }
+}
+
+
+@media screen and (max-width: $breakpoint-xl) {
+    body {
+        background-color: black;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-lg) {
+    body {
+        background-color: yellow;
+    }
+
+    .main-container {
+        .main-container__text {
+            width: 90%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    
+    body {
+        background-color: blue;
+    }
+
+    .main-container {
+        height: auto;
+        .main-container__text {
+            width: 100%;
+            
+            h3 {
+                padding: .5rem;
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                padding: .5rem;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    
+    body {
+        background-color: red;
+    }
+
+    .main-container {
+        .main-container__text {
+            
+            height: auto;
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+    
 }

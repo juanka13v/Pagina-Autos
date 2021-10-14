@@ -1,0 +1,29 @@
+@media screen and (max-width: $breakpoint-xl) {
+    body {
+        background-color: black;
+    }
+}
+
+
+@media screen and (max-width: $breakpoint-lg) {
+    body {
+        background-color: yellow;
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    
+    body {
+        background-color: blue;
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    
+    body {
+        background-color: red;
+    }
+    
+}
