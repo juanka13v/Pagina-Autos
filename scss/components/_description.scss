@@ -1,0 +1,89 @@
+@import 'scss/variables';
+
+.description-container {
+    display: flex;
+    padding: 3rem 4rem;
+    background-color: $color-2;
+    .description-container__text {
+        width: 50%;
+        padding: 1rem 2rem;  
+        background-color: $color-2; 
+        color: white;
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .description-container__list {
+        width: 50%;
+        
+        padding: 1rem 2rem; 
+        background-color: $color-1;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        ol {
+            list-style-position: outside;
+            li {
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }  
+}
+
+
+
+
+@media screen and (max-width: $breakpoint-md) {
+    
+    
+
+    .description-container {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        .description-container__text {
+            width: 100%;
+            
+        }
+
+        .description-container__list {
+            width: 100%;
+            
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+    
+    
+
+    .description-container {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        .description-container__text {
+            width: 100%;
+            padding: 0;
+        }
+
+        .description-container__list {
+            width: 100%;
+            padding: 0 .5rem ;
+        }
+    }
+    
+}
