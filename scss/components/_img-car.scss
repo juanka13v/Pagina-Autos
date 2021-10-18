@@ -1,0 +1,60 @@
+@import 'scss/variables';
+
+.img-car-container {
+    background-color: $color-2;
+    display: flex;
+    flex-direction: row-reverse;
+    .img-car {
+        width: 60%;
+        img {
+            width: 100%;
+            height: 100%;
+            padding: 3rem;
+        }
+    }
+
+    .img-car-title {
+        width: 40%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+
+        h4 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+    .img-car-container {
+        .img-car-title {
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    
+
+    .img-car-container {
+        flex-direction: column;
+        .img-car {
+            width: 100%;
+        }
+        .img-car-title {
+            width: 100%;
+            padding: 0 2rem;
+            padding-bottom: 3rem;
+            h4 {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+}

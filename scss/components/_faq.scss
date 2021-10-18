@@ -69,16 +69,15 @@
 
 
 @media screen and (max-width: $breakpoint-md) {
-    
-    body {
-        background-color: blue;
-    }
 
     .faq-container {
         padding: 2rem 2rem;
         .accordion-container {
             width: 100%;
             .accordion__title {
+                font-size: 1rem;
+                padding:  1.2rem 1rem;
+
                 i {
                     margin-left: 2rem;
                 }
@@ -89,16 +88,15 @@
 }
 
 @media screen and (max-width: $breakpoint-sm) {
-    
-    body {
-        background-color: red;
-    }
+
 
     .faq-container {
         padding: 2rem 0rem;
         .accordion-container {
             width: 100%;
             .accordion__title {
+                font-size: 0.8rem;
+
                 i {
                     margin-left: 2rem;
                 }
